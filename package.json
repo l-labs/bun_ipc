@@ -1,0 +1,22 @@
+{
+  "name": "@l-labs/bun",
+  "version": "0.1.0",
+  "description": "Bun client for the L database",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "./build.sh",
+    "test": "L_TEST_PORT=${L_TEST_PORT:-5001} bun test",
+    "postinstall": "./build.sh"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "bun": ">=1.0.0"
+  }
+}
